@@ -1,10 +1,13 @@
 import React from 'react';
 import AddItemInput from './components/AddItemInput';
+import ShoppingListComponent from './contexts/ShoppingListContext';
 
 function App() {
   return (
     <div className="App">
-      <AddItemInput />
+      <ShoppingListComponent>
+        <AddItemInput />
+      </ShoppingListComponent>
     </div>
   );
 }
