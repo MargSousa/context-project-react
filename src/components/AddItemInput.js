@@ -8,10 +8,9 @@ const AddItemInput = () => {
   return (
     <div className="input">
       <List />
-      <div>
+      <div className="item-form">
         <form onSubmit={handleSubmitNewItem}>
-          <label>New item: </label>
-          <input type="text" value={newItem} onChange={handleNewItem}/>
+          <input type="text" placeholder="Insert item to add to list..." value={newItem} onChange={handleNewItem}/>
           <button type="submit">Add</button>
         </form>
       </div>
