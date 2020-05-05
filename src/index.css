@@ -10,3 +10,18 @@ body {
 .App {
   padding: 30px;
 }
+
+.main-title {
+  color: rgb(85, 10, 85);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.list-title {
+  font-weight: bold;
+  margin: 20px 0px 10px 0px;
+}
+
+.list ul {
+  margin: 0px;
+}

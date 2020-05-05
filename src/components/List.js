@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ShoppingListContext } from '../contexts/ShoppingListContext';
 import ListItem from './ListItem';
 
 const List = () => {
+  const { list } = useContext(ShoppingListContext);
+
   return (
     <div className="list">
-      <h4>List:</h4>
-      <ListItem />
-      <ListItem />
-      <ListItem />
+      <div className="list-title">Shopping List:</div>
+      <ul>
+      {list.map((item => 
+          <li key={item.id}><ListItem item={item.name} /></li>
+      ))}
+      </ul>
     </div>
   );
 }
