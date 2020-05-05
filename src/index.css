@@ -13,8 +13,32 @@ body {
   padding: 20px auto;
 }
 
-.input label {
-  font-size: 14px;
+.empty {
+  font-style: italic;
+  color: grey;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.no-display {
+  display: none;
+}
+
+.item-form input {
+  width: 140px;
+  height: 19px;
+  border-radius: 3px;
+  border: 0.5px solid rgb(169, 169, 169);
+  padding-left: 5px;
+}
+
+.item-form button {
+  cursor: pointer;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid rgb(86, 65, 162);
+  background-color: rgb(86, 65, 162);
+  color: white;
 }
 
 .list {
@@ -24,7 +48,7 @@ body {
 }
 
 .list-title {
-  color: rgb(85, 10, 85);
+  color: #2b2068;
   font-weight: bold;
   margin-top: 30px;
 }
