@@ -7,12 +7,14 @@ const List = () => {
 
   return (
     <div className="list">
-      <div className="list-title">Shopping List:</div>
-      <ul>
-      {list.map((item => 
-          <li key={item.id}><ListItem item={item.name} /></li>
-      ))}
-      </ul>
+      <div className="center list-title">Grocery Shopping List:</div>
+      <div className="center">
+        <ul>
+          {list.map((item => 
+              <li key={item.id}><ListItem item={item.name} /></li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

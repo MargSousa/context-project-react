@@ -8,20 +8,53 @@ body {
 }
 
 .App {
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px auto;
 }
 
-.main-title {
-  color: rgb(85, 10, 85);
-  font-weight: bold;
-  margin-bottom: 20px;
+.input label {
+  font-size: 14px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .list-title {
+  color: rgb(85, 10, 85);
   font-weight: bold;
-  margin: 20px 0px 10px 0px;
+  margin-top: 30px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 .list ul {
-  margin: 0px;
+  padding-left: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-name {
+  width: 120px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background-image: url(./assets/delete-black.png) ;
+  background-size: 18px 18px;
+}
+
+.delete-icon:hover {
+  background-image: url(./assets/delete-red.png) ;
 }
