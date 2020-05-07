@@ -4,7 +4,6 @@ export const ShoppingListContext = createContext();
 
 const ShoppingListComponent = (props) => {
 
-  const [isEmpty, setIsEmpty] = useState(true);
   const [list, setList] = useState([]);
   const [newItem, setNewItem] = useState('');
   const [newItemId, setNewItemId] = useState(0);
@@ -20,7 +19,6 @@ const ShoppingListComponent = (props) => {
       setList([...list, { name: newItem, id: newItemId }])
       setNewItem('');
       setNewItemId(0);
-      setIsEmpty(false);
     }
   }
 
@@ -28,9 +26,6 @@ const ShoppingListComponent = (props) => {
     const id = Number(event.target.id);
     const newList = list.filter( item => item.id !== id)
     setList(newList);
-    if (newList.length === 0) {
-      setIsEmpty(!isEmpty);
-    }
   }
 
 
@@ -38,8 +33,7 @@ const ShoppingListComponent = (props) => {
     <ShoppingListContext.Provider 
     value={{ 
       list, 
-      newItem, 
-      isEmpty,
+      newItem,
       handleNewItem: handleNewItem, 
       handleSubmitNewItem: handleSubmitNewItem,
       handleDeleteItem: handleDeleteItem
